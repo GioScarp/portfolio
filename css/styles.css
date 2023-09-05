@@ -1,0 +1,453 @@
+@import url('https://fonts.cdnfonts.com/css/nunito-sans');
+
+/* Define una serie de variables de css personalizadas */
+/* Pseudoclase */
+:root {
+
+    --blue-dark: #131d46;
+    --blue-dark2: #16245c;
+    --blue-neon: #d8fbff;
+    --blue-ligh: #c9d9ef5f;
+    --purple: #7e00e6;
+    --gold1: #f4bd76;
+    --gold2: #f6cd8f;
+    --gray1: #1a1a1a;
+    --gray2: #ffffff80;
+    --black1: #1a1b1f;
+    --black2: #626874;
+
+    --green: #00e3c5;
+    --nav-height: 100px;
+    /* Definición de sombra con desplazamiento y enfoque */
+    /* Las sombras inician de Arriba, derecha, izquierda y abajo */
+    /* Para este caso el 8 indica tambien der y izq pero son 4 valores */
+    /* el ultimo valor siempre hará referncia al difuminado */
+    --shadow: 0 0px 10px;
+    --color_shadow: #00546d;
+}
+
+/* Selector Universal */
+/* Se especifica que se hará una personalización a todo el doc html */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'nunito-sans', sans-serif;
+    background-color: var(--blue-dark);
+}
+
+.hero{
+    width: 100%;
+    /* Altura minima del dispositivo vh -> view heigt */
+    min-height: var(--nav-height);
+    /* Establecer un fondo con un degradado lineal*/
+    /* linear-gradient(180deg) se encarga de crear un degradado lineal horizontal izq-der */
+}
+
+.nav__hero {
+    /* background: red; */
+    color: white;
+    height: 90px;
+    border-bottom: 1px solid var(--blue-ligh);
+}
+
+.container {
+    /* background-color: red; */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* Esta propiedad se encarga de ocultar los elementos */
+    overflow: hidden;
+    padding: 10px 0;
+    height: 100%;
+}
+
+.container--modifier{
+    width: 60%;
+}
+
+.nav__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    padding: 0;
+}
+
+.logo__name {
+    font-size: 24px;
+    color: var(--blue-neon);
+}
+
+.links--container{
+    /* background-color: blue; */
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+.links {
+    display: inline-block;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.highlighted {
+    color: var(--green);
+}
+
+.link--active {
+    color: var(--gold1);
+    font-weight: 700;
+}
+
+.resume-button{
+    color: var(--green);
+    background-color: transparent;
+    border: 1px
+    solid var(--green);
+    border-radius: 5px;
+    padding: 10px;
+    line-height: 1;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.bxs-heart {
+    color: red;
+    font-size: 25px;
+}
+
+main{
+    margin: 0px 200px;
+}
+
+.container-home{
+    width: 100%;
+    margin: 0 auto;
+    /* Esta propiedad se encarga de ocultar los elementos */
+    overflow: hidden;
+    padding: 0px 0px;
+    min-height: 90vh;
+    height: 90vh;
+}
+
+.hero__main {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.hero__textos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    width: 80%;
+}
+
+.mini-title{
+    font-size: 20px;
+    color: var(--green);
+    font-size: 50;
+    line-height: 3;
+    font-weight: 50;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--blue-neon)
+}
+
+.title-v2{
+    font-size: 62px;
+    font-weight: 600;
+    color: var(--gold1);
+}
+
+.title--active {
+    color: var(--gold1);
+    font-weight: 700;
+}
+
+.copy {
+    font-size: 20px;
+    color: white;
+    text-shadow: var(--shadow) var(--color_shadow);
+    max-width: 600px;
+    margin: 15px 0px;
+    font-weight: 20;
+}
+
+.copy__active {
+    font-weight: 700;
+}
+
+.cta {
+    margin-top: 30px;
+    padding: 20px 30px;
+    display: inline-block;
+    background: linear-gradient(180deg, #f7ce90 0%, #f4bd76 100%);
+    text-decoration: none;
+    color: var(--black2);
+    font-weight: 700;
+    box-shadow: var(--shadow) var(--color_shadow);
+    border-radius: 10px;
+}
+
+/* Sección de sobre mi */
+.container__about{
+    border-top: 1px solid var(--blue-ligh);
+    margin-left: 300px;
+    margin-top: 50px;
+    max-width: 900px;
+    height: 65vh;
+}
+
+.aboutme{
+    display: flex;
+    color: white;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+}
+
+.content-about {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+    
+}
+
+.copy__about {
+    display: block;
+}
+
+.copy__about p {
+    margin: 0px 0px 15px;
+    color: white;
+}
+
+.foto__perfil {
+    display: flex;
+    width: 100%;
+}
+
+.mockup {
+    object-fit: cover;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* PErsonalización de la sección de proyectos */
+.proyectos{
+    border-top: 1px solid var(--blue-ligh);
+    max-width: 1000px;
+    margin-left: 200px;
+}
+
+.subtitle{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+
+.subtitle--modifier{
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.copy__section{
+    color: var(--black2);
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 60px;
+}
+
+.copy__section--modifier{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.container-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 5px;
+}
+
+.card{
+    width: 30%;
+    padding: 30px 0;
+    overflow: hidden;
+    background: var(--blue-dark2);
+    border-radius: 10px;
+    position: relative;
+    text-align: right;
+    margin-bottom: 60px;
+    /* Aplica una sombra al elemento utilizando la propiedad box-shadow */
+    box-shadow: var(--shadow) var(--green); 
+/*
+   - 0 0: Desplazamiento horizontal y vertical de la sombra, en este caso, no hay desplazamiento (sombra centrada).
+   - 6px: Radio de difuminado de la sombra, creando un efecto suave en un área de 6 píxeles alrededor del elemento.
+   - var(--color_shadow): Color de la sombra obtenido de la variable CSS --color_shadow.
+*/
+}
+
+.card__img{
+    width: 95%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.cards__text{
+    text-align: left;
+    width: 90%;
+    margin:0 auto;
+}
+
+.card__list{
+    color: var(--gold2);
+    font-weight: 700;
+    /* Establece márgenes en las direcciones superior, derecha, inferior e izquierda del elemento */
+margin: 25px 0 12px;
+/*
+   - 25px: Margen superior de 25 píxeles.
+   - 0: No se aplican márgenes en los lados derecho e izquierdo.
+   - 12px: Margen inferior de 12 píxeles.
+*/
+
+    font-size: 18px;
+}
+
+.card__title{
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.card__copy{
+    color: var(--gray2);
+    margin-bottom: 16px;
+}
+
+.card__button{
+    display: block;
+    background: linear-gradient(180deg, #F7CE90 0%, #F4BD76 100%);
+    border-radius: 6px;
+    text-decoration: none;
+    width: 100%;
+    color: var(--black1);
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.card__date{
+    color: var(--gold2);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.container-bg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.background{
+    width: 68%;
+    height: 290px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.background__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+/* Sección experiencia WIP */
+.experiencia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor__expe {
+    border-top: 1px solid var(--blue-ligh);
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 20px;
+    padding-top: 20px;
+}
+
+.wip {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__wip {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+
+/* Sección del footer */
+
+.contianer--footer {
+    background-color: var(--blue-dark2);
+    border-top: 1px solid var(--blue-ligh);
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_text--footer {
+    padding-bottom: 30px;
+    color: var(--blue-neon);
+}
+
+.container_redes-footer a{
+    text-decoration: none;
+}
+
+.redes{
+    color: var(--green);
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 0px 4px;
+}
+
+.highlighted2 {
+    color: var(--gold1);
+}
